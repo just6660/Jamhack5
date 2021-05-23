@@ -245,11 +245,6 @@ else:
 st.write(""" # Average Grade vs. Program""")
 st.image('/home/just6660/jamhacksproject/totalaverage.png')
 
-st.write("""# About Us
-*Placeholder*
-""")
-
-
 
 
 
