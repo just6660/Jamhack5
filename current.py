@@ -5,6 +5,8 @@ from sklearn import linear_model, preprocessing
 from PIL import Image
 import sklearn
 
+# in order to run, dependencies are sklearn, numpy, pandas, streamlit
+# the command to run is : streamlit run current.py
 
 st.set_page_config(layout="wide")
 
