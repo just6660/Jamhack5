@@ -191,6 +191,9 @@ se = data[['Program', 'Grade', 'Applicant Type']][520:572]
 # accepted applicants in syde and their marks
 syde = data[['Program', 'Grade', 'Applicant Type']][573:597]
 
+st.write(""" # Data and Graphs""")
+st.write("""Select a program from the dropdown menu on the sidebar""")
+
 if dataset_name == "Accounting and Financial Management":
    st.write(afm)
    st.bar_chart(afm1)
@@ -238,6 +241,9 @@ elif dataset_name == "Systems Design Engineering":
    st.write(syde)
 else:
    st.write(afm)
+
+st.write(""" # Average Grade vs. Program""")
+st.image('/home/just6660/jamhacksproject/totalaverage.png')
 
 st.write("""# About Us
 *Placeholder*
