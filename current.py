@@ -20,10 +20,12 @@ st.image(Image, caption= "ML Project picture", use_column_width= True)
 
 # INTRODUCTION
 st.write("""# Introduction
-*Placeholder*
+This webapp was created for the 2021 JamHacks Hackathon. It is a data visualization project with a machine learning predictive component. Scroll down to explore further features such as booking a meeting with a Waterloo advisor. 
 """)
 
-# MODEL to predict your chances
+
+
+# MODEL
 st.write("""# Predictive Model
 *Placeholder*
 """)
@@ -242,4 +244,23 @@ st.write("""# About Us
 """)
 
 
-# Demographics
+
+
+
+
+# CREATING A CALENDAR TO BOOK APPOINTMENTS
+
+st.write("""
+# Set up an appointment with a Waterloo Advisor""")
+
+st.write(f"""
+### Pick a date (click on the box)
+""")
+date = st.date_input("")
+st.write(f"""
+### The date that you selected is {date}
+""")
+
+st.write("""# About Us
+*Placeholder*
+""")
