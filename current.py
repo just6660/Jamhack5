@@ -27,7 +27,7 @@ This webapp was created for the 2021 JamHacks Hackathon. It is a data visualizat
 
 # MODEL
 st.write("""# Predictive Model
-*Placeholder*
+This is a machine learning model created using a linear regression model from the pyhon library scikit-learn. This is a proof of concept and currently can only make predictions for the Computer Science Program.
 """)
 
 data = pd.read_csv("UW Data - Sheet4-2.csv")
@@ -102,22 +102,18 @@ st.sidebar.write("""
 """)
 st.sidebar.write("""Here you can find what the website is all about and the purpose behind it.""")
 
-st.sidebar.write(""" ## Data""")
-st.sidebar.write("Lorem ipsum dolor, sit amet consectetur adipisicing elit.")
+st.sidebar.write(""" ## Predictive Model""")
+st.sidebar.write("Using past data, a machine learning model will predict your chances of admission")
 
 st.sidebar.write(""" ## Visualization""")
 st.sidebar.write("Graphs and datsets that depict the data for this year's admissions")
 
-st.sidebar.write(""" ## Predict Your chances""")
-st.sidebar.write("Predict your chances and see if you have a good chance on getting on")
+st.sidebar.write(""" ## Average Grade vs Program Chart""")
+st.sidebar.write("View a chart displaying average grade vs programs")
 
-st.sidebar.write(""" ## About Us""")
-st.sidebar.write("Learn about the creators of this website")
-
-data = pd.read_csv("UW Data - all.csv")
-
-
-dataset_name = st.sidebar.selectbox("Select Dataset", (
+st.sidebar.write(f"""
+## Select Dataset""")
+dataset_name = st.sidebar.selectbox("", (
    "Accounting and Financial Management",
    "Arcitectural Engineering",
    "Biomedical Engineering",
@@ -126,7 +122,7 @@ dataset_name = st.sidebar.selectbox("Select Dataset", (
    "Computer Engineering",
    "Computer Science",
    "Computer Science and Financial Management",
-   "Computer Science/BBA"
+   "Computer Science/BBA",
    "Electrical Engineering",
    "Environmental Engineering",
    "Global Business and Digital Arts",
@@ -141,12 +137,23 @@ dataset_name = st.sidebar.selectbox("Select Dataset", (
    "Software Engineering",
    "Systems Design Engineering",))
 
+st.sidebar.write(""" ## Waterloo Help""")
+st.sidebar.write("Book and appointment with a Waterloo University Advisor")
+
+st.sidebar.write(""" ## About Us""")
+st.sidebar.write("Learn about the creators of this website")
+
+data = pd.read_csv("UW Data - all.csv")
+
+
+
 st.write(f"""
 # Data from {dataset_name}
 """)
 
 # accepted applicants in AFM and their marks
 afm = data[['Program', 'Grade', 'Applicant Type']][0:22]
+afm1 = data['Grade'][0:22]
 # accepted applicants in architectural engineering and their marks
 arch = data[['Program', 'Grade', 'Applicant Type']][23:34]
 # accepted applicants in biomedical and their marks
@@ -190,7 +197,6 @@ se = data[['Program', 'Grade', 'Applicant Type']][520:572]
 # accepted applicants in syde and their marks
 syde = data[['Program', 'Grade', 'Applicant Type']][573:597]
 
-st.write(""" # Data and Graphs""")
 st.write("""Select a program from the dropdown menu on the sidebar""")
 
 if dataset_name == "Accounting and Financial Management":
@@ -241,7 +247,7 @@ else:
    st.write(afm)
 
 st.write(""" # Average Grade vs. Program""")
-st.image('/home/just6660/jamhacksproject/totalaverage.png')
+st.image('totalaverage.png')
 
 
 
@@ -261,5 +267,5 @@ st.write(f"""
 """)
 
 st.write("""# About Us
-*Placeholder*
+We’re four Gr.12 students pursuing Engineering in post-secondary next year. We were interested in 2021’s admissions and how greatly they were impacted due to COVID-19. We decided to create a webapp in regards to admission information at the University of Waterloo. We also implemented an acceptance predictor utilising machine learning to predict the chances of admission into one the most competitive program this year, Computer Science. 
 """)
