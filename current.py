@@ -147,7 +147,6 @@ st.write(f"""
 
 # accepted applicants in AFM and their marks
 afm = data[['Program', 'Grade', 'Applicant Type']][0:22]
-afm1 = data['Grade'][0:22]
 # accepted applicants in architectural engineering and their marks
 arch = data[['Program', 'Grade', 'Applicant Type']][23:34]
 # accepted applicants in biomedical and their marks
@@ -196,7 +195,6 @@ st.write("""Select a program from the dropdown menu on the sidebar""")
 
 if dataset_name == "Accounting and Financial Management":
    st.write(afm)
-   st.bar_chart(afm1)
 elif dataset_name == "Arcitectural Engineering":
    st.write(arch)
 elif dataset_name == "Biomedical Engineering":
